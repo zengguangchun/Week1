@@ -1,4 +1,4 @@
-package com.bawei.list.week1.com.bawei.list.week1.adpter;
+package com.bawei.list.week1.adapter;
 
 import android.content.Context;
 import android.view.View;

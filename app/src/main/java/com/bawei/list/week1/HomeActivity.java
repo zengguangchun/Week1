@@ -1,12 +1,13 @@
 package com.bawei.list.week1;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.TextView;
 
-import com.bawei.list.week1.com.bawei.list.week1.adpter.FragmentAdapter;
+import com.bawei.list.week1.adapter.FragmentAdapter;
 
 import java.util.ArrayList;
 
@@ -31,7 +32,13 @@ public class HomeActivity extends FragmentActivity {
         vp.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+                for (int i = 0; i < listtv.size(); i++) {
+                    if (i == position) {
+                        listtv.get(i).setTextColor(Color.GREEN);
+                    } else {
+                        listtv.get(i).setTextColor(Color.BLACK);
+                    }
+                }
             }
 
             @Override
